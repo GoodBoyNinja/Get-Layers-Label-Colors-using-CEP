@@ -5,6 +5,10 @@ function getLabelColors () {
     const fs = cep_node.require('fs');
     const path = cep_node.require('path');
     const cs = new CSInterface();
+    
+    // check if macOS or windows
+    const osName = GEP.cs.getOSInformation().toLowerCase();
+    const isMacOS = osName.indexOf('windows') ? false : true;   
 
     // get the AE version, down to 1 decimal place (that's what the folder names are using)
     var version = cs.getHostEnvironment().appVersion;
@@ -12,7 +16,7 @@ function getLabelColors () {
 
     // finding the preferences folder
     var userDataFolder = cs.getSystemPath(SystemPath.USER_DATA);
-    var prefsFolder = path.isMacOS() ? path.join(userDataFolder, "Adobe", "After Effects", version) : path.join(userDataFolder, "Preferences", "Adobe", "After Effects", version)(userDataFolder, "Preferences");
+    var prefsFolder = isMacOS ? path.join(userDataFolder, "Adobe", "After Effects", version) : path.join(userDataFolder, "Preferences", "Adobe", "After Effects", version)(userDataFolder, "Preferences");
     var prefsFile = path.join(prefsFolder, `Adobe After Effects ${version} Prefs-indep-general.txt`);
 
     var prefsFolderExists = fs.existsSync(prefsFolder);
@@ -83,3 +87,5 @@ function ascii2hex(str) {
   }
   return arr.join('');
 }
+
+
