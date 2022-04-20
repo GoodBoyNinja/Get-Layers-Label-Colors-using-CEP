@@ -3,7 +3,7 @@
 _Note: This is for CEP panels. I am not using ExtendScript here.
 If you want to use ExtendScript, you'll have to modify the code._
 
-_Also, **I have not yet tested it on MACOS**._
+_Also, **I have not yet tested it on MacOS**._
 
 # What and Why
 Label colors in Ae Preferences look like this:
