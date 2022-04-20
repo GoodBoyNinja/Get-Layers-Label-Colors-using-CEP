@@ -44,7 +44,6 @@ function getLabelColors () {
             var id = crnt.substring(crnt.indexOf('#') + 1);
             id = id.substring(0, id.indexOf('"'));
             id = Number(id);
-            console.log(id);
 
             // get the raw color, as displayed in AE
             var rawColor = crnt.substring(crnt.indexOf('=') + 1).trim();
