@@ -52,3 +52,11 @@ If this helped you [consider buying one of my tools](https://www.goodboy.ninja/)
 
 Good Boy Ninja
 
+
+.
+.
+.
+
+_related keywords that may have brought you here:
+Label Color ID 2,  .getPrefAsString(), RGB-HEX-ASCII , after effects getprefasstring label, Scripting: Retrieving Label Color from Preferences,Reading the label colors from preferences file, Get Label colors from Pref , ExtendScript, JavaScript, Labels_
+
