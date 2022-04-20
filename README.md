@@ -1,7 +1,7 @@
 # Get-Layers-Label-Colors-using-CEP
 ![image](https://user-images.githubusercontent.com/66829812/164243124-6041a70e-b3a2-4bd2-a5e4-af8fd479a01e.png)
 _Note: This is for CEP panels. I am not using ExtendScript here.
-If you want to use extendscript, you'll have to modify the code._
+If you want to use ExtendScript, you'll have to modify the code._
 
 # What and Why
 Label colors in Ae Preferences look like this:
@@ -25,17 +25,28 @@ Label colors in Ae Preferences look like this:
 	"Label Color ID 2 # 9" = FF"J"A4"L"
 ```
 
-After a lot of google searches, I found a comment by RenderTom pointing out that the values are a weird mix of ascii and hex. (The parts inside the qutation marks are ascii). **This repository finds the preference file, reads it, finds that section, converts each value into propper hex.**
+After a lot of google searches, I found a comment by RenderTom pointing out that the values are a weird mix of ASCII and hex. (The parts inside the quotation marks are ASCII). **This repository finds the preference file, reads it, finds that section, and converts each value into propper hex.**
 
-# return
+### Usage
+call the function:
+```
+getLabelColors(); 
+```
+
+### return
 returns an array of hex codes in the right order (based on the Label Color ID #)
 
 Example: `["", "B53838", "E4D84c", "A9CBC7", "E5BCC9", "A9A9CA", "E7C19E", "B3C7B3", "677dE0", "4a224134224c", "8E2c9A", "E8920D", "7F452a", "F46dD6", "3dA2A5", "A89677", "1E401E"]`
 
-The first element is empty because there is no label of number 0, but that's okay since the `layer.label` [attribute](https://ae-scripting.docsforadobe.dev/layers/layer.html#layer-label) in ExtendScript returns an index that matches that convention.
+The first element is empty because there is no label for the number 0, but that's okay since the `layer.label` [attribute](https://ae-scripting.docsforadobe.dev/layers/layer.html#layer-label) in ExtendScript returns an index that matches that convention.
 
-
-
-### requirements:
+### requirements
 requires  [using nodejs as part of your project](https://www.davidebarranca.com/2015/12/html-panel-tips-19-cc2015-1-cep6-1-node-js-fixes/).
+
+
+
+# Support
+If this helped you [consider buying one of my tools](https://www.goodboy.ninja/) or sharing this elsewhere where people might need it.
+
+Good Boy Ninja
 
