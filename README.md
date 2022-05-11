@@ -1,7 +1,7 @@
 # Get-Layers-Label-Colors-using-CEP
 ![image](https://user-images.githubusercontent.com/66829812/164243124-6041a70e-b3a2-4bd2-a5e4-af8fd479a01e.png)
 _Note: This is for CEP panels. I am not using ExtendScript here.
-If you want to use ExtendScript, you'll have to modify the code._
+If you want to use ExtendScript, you might want to check out this code by [stibinator](https://github.com/stibinator/AEScripts/blob/master/ScriptUI%20Panels/simplify%20duik%20icons.jsx#L283)._
 
 _Also, **I have not yet tested it on MacOS**._
 
