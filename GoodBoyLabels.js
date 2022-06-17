@@ -51,13 +51,21 @@ function getLabelColors () {
             // raw color is weird. It's half HEX and half ASCII.
             // the part that's ASCII is inside quotation marks.
             // Let's convert it to hex
-            const qStart = rawColor.indexOf('"');
-            const qEnd = rawColor.lastIndexOf('"');
-            const asciiValue = rawColor.substring(qStart + 1, qEnd);
-            const hexTranslated = ascii2hex(asciiValue);
-
-            // replace it and ommit the first two letters
-            var hexColor = rawColor.replace('"' + asciiValue + '"', hexTranslated).substring(2);
+            
+            // (the following part has been contributed by @Eyalco1, the above comments may be outdated)
+            const splits = rawColor.split('"');
+            const filteredIndexes = splits.map((s, i) => {
+            if (i % 2 !== 0) return i
+                }).filter(i => i);
+                splits.forEach((s, i) => {
+                    if (filteredIndexes.includes(i)) {
+                        splits[i] = ascii2hex(splits[i])
+                    }
+            });
+            
+             // replace it and ommit the first two letters
+            const hexColor = splits.join('').substring(2); // "4AA44C"
+            
 
             // log it if you want to see what's up:
             // console.log(hexColor);
