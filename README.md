@@ -15,11 +15,13 @@ getLabelColors();
 returns an object with two arrays, "colors" and "names".
 Both arrays are sorted using the label ID.
 
-Example: `
+Example:
+```js
 {
 	colors: (17) ["", "B53838", "E4D84c", "A9CBC7", "E5BCC9", "A9A9CA", "E7C19E", "B3C7B3", "677dE0", "4aA44c", "8E2c9A", "E8920D", "7F452a", "F46dD6", "3dA2A5", "A89677", "1E401E"]
 	names: (17) ["", "Red", "Yellow", "Aqua", "Pink", "Lavender", "Peach", "Sea Foam", "Blue", "Green", "Purple", "Orange", "Brown", "Fuchsia", "Cyan", "Sandstone", "Dark Green"]
-}`
+}
+```
 
 
 
