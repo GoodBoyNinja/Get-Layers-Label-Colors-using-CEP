@@ -3,7 +3,25 @@
 _Note: This is for CEP panels. I am not using ExtendScript here.
 If you want to use ExtendScript, you might want to check out this code by [stibinator](https://github.com/stibinator/AEScripts/blob/master/ScriptUI%20Panels/simplify%20duik%20icons.jsx#L283)._
 
-_Also, **I have not yet tested it on MacOS**._
+_Now works on both macOS and windows._
+
+### Usage
+call the function:
+```
+getLabelColors(); 
+```
+
+### return
+returns an object with two arrays, "colors" and "names".
+Both arrays are sorted using the label ID.
+
+Example: `
+{
+	colors: (17) ["", "B53838", "E4D84c", "A9CBC7", "E5BCC9", "A9A9CA", "E7C19E", "B3C7B3", "677dE0", "4aA44c", "8E2c9A", "E8920D", "7F452a", "F46dD6", "3dA2A5", "A89677", "1E401E"]
+	names: (17) ["", "Red", "Yellow", "Aqua", "Pink", "Lavender", "Peach", "Sea Foam", "Blue", "Green", "Purple", "Orange", "Brown", "Fuchsia", "Cyan", "Sandstone", "Dark Green"]
+}`
+
+
 
 # What and Why
 Label colors in Ae Preferences look like this:
@@ -29,16 +47,7 @@ Label colors in Ae Preferences look like this:
 
 After a lot of google searches, I found a comment by RenderTom pointing out that the values are a weird mix of ASCII and hex. (The parts inside the quotation marks are ASCII). **This repository finds the preference file, reads it, finds that section, and converts each value into propper hex.**
 
-### Usage
-call the function:
-```
-getLabelColors(); 
-```
 
-### return
-returns an array of hex codes in the right order (based on the Label Color ID #)
-
-Example: `["", "B53838", "E4D84c", "A9CBC7", "E5BCC9", "A9A9CA", "E7C19E", "B3C7B3", "677dE0", "4a224134224c", "8E2c9A", "E8920D", "7F452a", "F46dD6", "3dA2A5", "A89677", "1E401E"]`
 
 The first element is empty because there is no label for the number 0, but that's okay since the `layer.label` [attribute](https://ae-scripting.docsforadobe.dev/layers/layer.html#layer-label) in ExtendScript returns an index that matches that convention.
 
