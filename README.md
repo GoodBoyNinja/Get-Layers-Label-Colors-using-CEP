@@ -9,7 +9,7 @@ _Now works on both macOS and windows._
 ### Usage
 call the function:
 ```
-getLabelColors(); 
+getLabelsInfo(); 
 ```
 
 ### return
