@@ -18,7 +18,7 @@ function getLabelsInfo() {
     let version = cs.getHostEnvironment().appVersion;
     version = version.split(".")[0] + "." + version.split(".")[1];
     let userDataFolder = cs.getSystemPath(SystemPath.USER_DATA);
-    let prefsFolder = isMacOS ? path.join(path.dirname(userDataFolder), "Preferences", "Adobe", "After Effects", version) : path.join(userDataFolder, "Preferences", "Adobe", "After Effects", version);
+    let prefsFolder = isMacOS ? path.join(path.dirname(userDataFolder), "Preferences", "Adobe", "After Effects", version) : path.join(userDataFolder, "Adobe", "After Effects", version);
     let prefsFile = path.join(prefsFolder, `Adobe After Effects ${version} Prefs-indep-general.txt`);
 
     if (!fs.existsSync(prefsFolder) || !fs.existsSync(prefsFile)) {
