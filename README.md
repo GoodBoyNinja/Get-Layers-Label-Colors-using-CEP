@@ -58,8 +58,9 @@ The first element is empty because there is no label for the number 0, but that'
 requires  [using nodejs as part of your project](https://www.davidebarranca.com/2015/12/html-panel-tips-19-cc2015-1-cep6-1-node-js-fixes/).
 
 ### limitations
-Will not work on After-Effects beta. If you want it to work, make sure the path to the preferences file says "After-Effects (Beta)" instad of "After-Effects".
-If you do, feel free to contirbute to this repo by fixing it.
+- Will not work on After-Effects beta. If you want it to work, make sure the path to the preferences file says "After-Effects (Beta)" instad of "After-Effects".
+- Will only work in English After-Effects because the preferences file name is language based (can be fixed by getting the file with the suffix "general.txt")
+If you do, feel free to contirbute to this repo with solutions.
 
 
 # Support
